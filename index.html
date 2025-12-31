@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Lab 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1> DEPI - JavaScript Lab 1 </h1>
+    <p>جرب كل دالة بسهولة من خلال الواجهة البسيطة.</p>
+</header>
+
+<nav class="tabs">
+    <div class="tab active" onclick="openTab(0)">1- نوع المتغير</div>
+    <div class="tab" onclick="openTab(1)">2- العمليات الحسابية</div>
+    <div class="tab" onclick="openTab(2)">3- هل NaN؟</div>
+    <div class="tab" onclick="openTab(3)">4- زوجي / فردي</div>
+    <div class="tab" onclick="openTab(4)">5- دمج نصين</div>
+    <div class="tab" onclick="openTab(5)">6- تحويل لحروف كبيرة</div>
+    <div class="tab" onclick="openTab(6)">7- حرف عند موقع</div>
+    <div class="tab" onclick="openTab(7)">8- ترحيب</div>
+    <div class="tab" onclick="openTab(8)">9- null/undefined</div>
+    <div class="tab" onclick="openTab(9)">10- رقم عشوائي</div>
+    <div class="tab" onclick="openTab(10)">11- موجب/سالب/صفر</div>
+    <div class="tab" onclick="openTab(11)">12- تقييم آمن</div>
+</nav>
+
+<main class="contents">
+    <!-- كل Content هنا... -->
+    <!-- مثال Tab 1 -->
+    <div class="content active">
+        <h2>1- تحقق نوع المتغير</h2>
+        <input id="typeInput" placeholder="أدخل أي قيمة">
+        <button onclick="runType()">تحقق</button>
+        <div class="result" id="typeResult"></div>
+    </div>
+
+    <!-- Tab 2 -->
+    <div class="content">
+        <h2>2- العمليات الحسابية</h2>
+        <input id="numOne" placeholder="العدد الأول">
+        <input id="numTwo" placeholder="العدد الثاني">
+        <button onclick="runMathOps()">تشغيل</button>
+        <div class="result" id="mathResult"></div>
+    </div>
+
+    <!-- Tab 3 -->
+    <div class="content">
+        <h2>3- تحقق إذا كان NaN</h2>
+        <input id="nanInput" placeholder="أدخل قيمة">
+        <button onclick="runIsNaN()">تحقق</button>
+        <div class="result" id="nanResult"></div>
+    </div>
+
+    <!-- Tab 4 -->
+    <div class="content">
+        <h2>4- زوجي أو فردي</h2>
+        <input id="evenInput" placeholder="أدخل رقم">
+        <button onclick="runEven()">تحقق</button>
+        <div class="result" id="evenResult"></div>
+    </div>
+
+    <!-- Tab 5 -->
+    <div class="content">
+        <h2>5- دمج نصين</h2>
+        <input id="text1" placeholder="النص الأول">
+        <input id="text2" placeholder="النص الثاني">
+        <button onclick="runConcat()">دمج</button>
+        <div class="result" id="concatResult"></div>
+    </div>
+
+    <!-- Tab 6 -->
+    <div class="content">
+        <h2>6- تحويل النص لحروف كبيرة</h2>
+        <input id="upperInput" placeholder="أدخل نص">
+        <button onclick="runUpper()">تحويل</button>
+        <div class="result" id="upperResult"></div>
+    </div>
+
+    <!-- Tab 7 -->
+    <div class="content">
+        <h2>7- حرف عند موقع محدد</h2>
+        <input id="charInput" placeholder="أدخل نص">
+        <input id="charIndex" placeholder="الموقع (رقم)">
+        <button onclick="runCharAt()">تحقق</button>
+        <div class="result" id="charResult"></div>
+    </div>
+
+    <!-- Tab 8 -->
+    <div class="content">
+        <h2>8- الترحيب</h2>
+        <input id="nameInput" placeholder="أدخل اسمك">
+        <button onclick="runGreet()">تحقق</button>
+        <div class="result" id="greetResult"></div>
+    </div>
+
+    <!-- Tab 9 -->
+    <div class="content">
+        <h2>9- تحقق null أو undefined</h2>
+        <input id="nullInput" placeholder="أدخل قيمة">
+        <button onclick="runNullCheck()">تحقق</button>
+        <div class="result" id="nullResult"></div>
+    </div>
+
+    <!-- Tab 10 -->
+    <div class="content">
+        <h2>10- رقم عشوائي بين قيمتين</h2>
+        <input id="randMin" placeholder="القيمة الدنيا">
+        <input id="randMax" placeholder="القيمة العليا">
+        <button onclick="runRandom()">تشغيل</button>
+        <div class="result" id="randResult"></div>
+    </div>
+
+    <!-- Tab 11 -->
+    <div class="content">
+        <h2>11- موجب، سالب، أو صفر</h2>
+        <input id="posInput" placeholder="أدخل رقم">
+        <button onclick="runPosNeg()">تحقق</button>
+        <div class="result" id="posResult"></div>
+    </div>
+
+    <!-- Tab 12 -->
+    <div class="content">
+        <h2>12- تقييم تعبير رياضي بأمان</h2>
+        <input id="exprInput" placeholder="5+3*2">
+        <button onclick="runSafeEval()">تشغيل</button>
+        <div class="result" id="evalResult"></div>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
